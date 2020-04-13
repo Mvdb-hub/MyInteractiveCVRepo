@@ -12,6 +12,7 @@ using InteractiveCvWebApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using InteractiveCvAspCore.Data;
 
 namespace InteractiveCvWebApp
 {
@@ -32,6 +33,11 @@ namespace InteractiveCvWebApp
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //Configureer de Context om je SQL Server en connectionstring te gebruiken.
+            services.AddDbContext<InteractiveCvContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddRazorPages();
         }
 
