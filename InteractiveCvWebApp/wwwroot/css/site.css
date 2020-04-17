@@ -1,33 +1,6 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
+﻿
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   html {
@@ -35,16 +8,209 @@ html {
   }
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+body {
+    background-color: #f9f9f9;
+    color: #303030;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+
+
+/* ------------------------------------------------
+    Bootstrap navbar style
+   ------------------------------------------------ */
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+.navbar-brand {
+    height: auto;
+    padding: 0;
+}
+.navbar-light .navbar-brand {
+    color: #303030 !important;
+}
+
+.navbar-brand-content, .navbar-brand-img {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.navbar-brand-img {
+    padding-right: 8px;
+}
+
+.navbar-brand-img img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar-brand-content h1 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.navbar-brand-content p{
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 10px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        background-color: #fff !important;
+    }
+
+    .navbar-button {
+        visibility: hidden;
+        width: 0;
+    }
+}
+
+.navbar-nav .nav-link {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    font-size: 15px !important;
+}
+
+.active, .nav-link:hover{
+    text-decoration:line-through;
+}
+
+.navbar-bg-clear {
+    background-color: rgba(255,255,255,0);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    padding-top: 20px;
+}
+
+.navbar-bg-white {
+    background-color: rgba(255,255,255,1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+.navbar-toggler {
+    color: #303030 !important;
+    background-color: rgba(255,255,255,0) !important;
+    border-color: rgba(0,0,0,0.9) !important;
+    border-radius: 0 !important;
+    padding: 1px 6px !important;
+}
+
+.navbar-button a, .navbar-button a:hover {
+    color: #303030;
+    padding: 10px;
+    margin-left:15px;
+    border: #303030 2px solid;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration:none;
+}
+
+
+/* -----------------------------------------------
+    Cover header style
+   ---------------------------------------------- */
+
+
+.header {
+    background-image: url(/images/mvdbrouckeCover3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.headinglead {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.125;
+}
+
+
+
+
+/* --------------------------------------------------
+    Bootstrap css class overides
+    ------------------------------------------------- */
+
+/*.container {
+    
+}*/
+
+/*@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 65%;
+    }
+}*/
+
+.col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/*-------------------END-------------------------*/
+
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.main-color {
+    color: #678fae;
+}
+/*Profile section css*/
+.profileImg {
+    width: 100%;
+    max-width: 246px;
+    height: auto;
+    padding: 0 !important;
+    border: 8px solid #eef3f6;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 button.accept-policy {
   font-size: 1rem;

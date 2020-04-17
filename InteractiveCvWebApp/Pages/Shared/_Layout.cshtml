@@ -11,29 +11,48 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-bg-clear fixed-top">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Miguel Vanden Broucke</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <div class="navbar-brand-img">
+                        <img class="rounded-circle" alt="40x40" src="~/images/mvdbroucke.jpg" data-holder-rendered="true">
+                    </div>
+                    <div class="navbar-brand-content">
+                        <h1>Miguel <strong>VDB</strong></h1>
+                        <p><strong>.NET</strong> Ontwikkelaar</p>
+                    </div>
+                </a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ml-auto text-uppercase">
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Privacy</a>
+                            <a class="nav-link text-dark" href="#profile">Profiel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#profile">Ervaring</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#profile">Compententies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#profile">Contact</a>
                         </li>
                     </ul>
+                </div>
+                <div class="navbar-button">
+                    <a class="" href="#">Stuur Mij</a>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main">
             @RenderBody()
         </main>
     </div>
@@ -46,8 +65,9 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/lib/font-awesome/css/fontawesome.min.js"></script>
+    <script src="~/lib/font-awesome/js/fontawesome.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

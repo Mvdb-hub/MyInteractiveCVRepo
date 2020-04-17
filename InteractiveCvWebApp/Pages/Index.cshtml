@@ -4,10 +4,49 @@
     ViewData["Title"] = "Home";
 }
 
-@Html.DisplayFor(model => model.FirstPerson.Name)
-<br />
-@Html.DisplayFor(model => model.FirstPerson.Abilities.FirstOrDefault().Description)
-<br />
-@Html.DisplayFor(model => model.FirstPerson.Educations.FirstOrDefault().Course)
-<br />
-@Html.DisplayFor(model => model.FirstPerson.Experiences.FirstOrDefault().Function)
+<div id="home" class="header">
+    <div class="container text-dark" style="padding-top:250px; width:50%; float:left;">
+        <h2 class="text-uppercase"><strong>Let's</strong> build <strong>something</strong> great <strong>Toghether</strong></h2>
+        @*<p class="headinglead text-uppercase">Miguel Vanden Broucke</p>
+        <h2 class="text-uppercase" style="font-size:48px;">Designer <span class=""> / </span> Developer</h2>
+        <p class="headinglead">Interactieve CV</p>*@
+    </div>
+</div>
+
+
+<div id="profile" class="container">
+        <div class="border-bottom text-center pb-3 pt-3">
+            <h2 class="display-4 main-color">Profiel</h2>
+            <p class="lead">Ik ben een Microsoft .NET ontwikkelaar</p>
+        </div>
+        <div class="row pb-4">
+            <div class="col-lg-4 text-center text-md-left">
+                <h2 class="main-color">Over mij</h2>
+                <p>
+                    @Html.DisplayFor(model => model.FirstPerson.AboutMe)
+                </p>
+            </div>
+            <div class="col-lg-4 text-center pt-2 pb-2">
+                <img class="rounded-circle profileImg" alt="100x100" src="@Html.DisplayFor(model => model.FirstPerson.ImageUrl)" data-holder-rendered="true">
+            </div>
+            <div class="col-lg-4 text-center text-md-left">
+                <h2 class="main-color">Details</h2>
+                <dl>
+                    <dt class="col-sm-12">Naam:</dt>
+                    <dd class="col-sm-12">@Html.DisplayFor(model => model.FirstPerson.Name)</dd>
+                    <dt class="col-sm-12">Leeftijd:</dt>
+                    <dd class="col-sm-12">@Html.DisplayFor(model => model.PersonAge)</dd>
+                    <dt class="col-sm-12">Locatie:</dt>
+                    <dd class="col-sm-12">@Html.DisplayFor(model => model.FirstPerson.Location)</dd>
+                </dl>
+                <span>
+                    <a href="https://twitter.com/mvdbroucke?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-lang="nl" data-show-count="false">Volg mij</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </span>
+            </div>
+        </div>
+        <div class="w-100 text-center">
+            <p class="lead font-italic">Dit project is gebouwd in ASP.NET Core met C# en SQL-server.</p>
+            <a class="github-button" href="https://github.com/Mvdb-hub/Interactieve-CV" data-size="large" aria-label="Bekijk Mvdb-hub/Interactieve-CV op GitHub">Bekijk project op GitHub</a>
+        </div>
+    </div>
